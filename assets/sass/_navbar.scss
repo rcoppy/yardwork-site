@@ -1,0 +1,88 @@
+#navbar {
+
+    $border_bottom_width: 4px;
+
+    position: relative; 
+    top: -1 * $border_bottom_width;
+
+    width: 65%;
+    height: $navbar_height;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+        margin-left: 10vw;
+    }
+
+    >.container {
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+
+        height: 100%;
+        padding-bottom: 8px; 
+
+    }
+
+    span {
+        
+        max-height: 70%;
+        
+        flex-grow: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        border-left: $border_bottom_width solid rgba($black-coffee, 0);
+        border-right: $border_bottom_width solid rgba($black-coffee, 0);
+        
+        padding-left: 16px; 
+        padding-right: 16px; 
+        padding-top: $border_bottom_width;
+        
+        border-radius: 0px; 
+
+        @include transition(border-bottom 0.15s ease-in-out);
+        @include transition(background-color 0.15s ease-in-out);
+        @include transition(border-radius 0.3s ease-out);
+    }
+
+    span a {
+        
+        flex-shrink: 1;
+        
+        filter: drop-shadow(0 0 4px $black-coffee);
+        font-weight: 600; 
+        font-size: 1.5rem;
+
+        color: saturate($header_color, 20%);
+        padding: 0.5rem 0; 
+
+        @include transition(color 0.15s ease-in-out);
+        @include transition(filter 0.15s ease-in-out);
+    }
+
+    span:hover {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px; 
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px; 
+
+        border-left: $border_bottom_width solid $header_color;
+        border-right: $border_bottom_width solid $header_color;
+
+        filter: drop-shadow(0 0 4px lighten($middle-blue-purple, 15%));
+
+        a {
+            color: $header_color;
+        }
+    }
+}

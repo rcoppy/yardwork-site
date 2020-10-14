@@ -1,0 +1,5 @@
+extends page_template.pug
+include image_frame_mixin.pug
+
+block content 
+  include:markdown-it(html, linkify) ./markdown/index.md

@@ -1,0 +1,51 @@
+// colors
+$middle-blue-purple: #8e7dbeff;
+$antique-brass: #c19f87ff;
+$pacific-blue: #23B5D3ff;
+$neon-blue: #35C2F0ff;
+// $champagne-pink: #E5D9D0ff;
+$black-coffee: #3b2c35ff;
+$piggy-pink: #ffdfeb;
+$cartridge-red: #F70001ff;
+$header-dark-blue: #708ad2;
+
+
+/* CSS HEX */
+$steel-blue: #537993ff;
+$beau-blue: #c7dcebff;
+$eerie-black: #232421ff;
+$rosy-brown: #b28f89ff;
+$champagne-pink: #f2ded4ff;
+
+$backdrop-tan: #c0aca0;
+$volt-blue: #243799;
+$volt-aqua: #6cace5;
+
+// assignments
+$header_color: $champagne-pink;
+$navbar_color: rgba($eerie-black, 0.8);
+
+$hyperlink_color: $volt-blue;
+$hyperlink_hover_color: $volt-aqua;
+
+$darkmode_hyperlink_color: saturate(lighten($neon-blue, 27%), 75%);
+$darkmode_hyperlink_hover_color: saturate(lighten($neon-blue, 30%), 100%);
+
+$text_color: $eerie-black;
+$text_background_color: $backdrop-tan;
+
+$code_background_color: darken($champagne-pink, 10%);
+$code_text_color: darken($middle-blue-purple, 25%);
+$code_border_radius: 4px; 
+
+$navbar_height: 10vh;
+$header_height: 100vh; // 79vh + $navbar_height; // 30vh + $navbar_height;
+$footer_height: 20vh;
+$gallery_card_height: (100vh - $header_height - $footer_height - 6vh) / 1.5;
+
+$mobile_header_height: 100vh; // 65vh + $navbar_height;
+$mobile_footer_height: 40vh;
+$mobile_gallery_card_height: 40vh;
+
+
+
