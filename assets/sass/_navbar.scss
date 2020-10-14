@@ -1,7 +1,10 @@
 #navbar {
 
+    box-shadow: none;
+
     &.fixed-nav {
         position: fixed;
+        box-shadow: 0px 6px 20px 0px rgba(black, 0.65);
     }
 
     &::before {
@@ -15,11 +18,19 @@
         width: 100%;
         height: 100%;
 
-        @include transition(background-color 0.15s ease-in-out);
+        // display: block;
+
+        @include transition(opacity 0.15s ease-in-out);
+
+        background-image: url("../images/leaves.png");
+        opacity: 0;
+        // box-shadow: 0px 6px 20px 0px black;
+
+        z-index: -1;
     }
 
     &.fixed-nav::before {
-        background-color: $steel-blue;
+        opacity: 1;
     }
 
     $border_bottom_width: 4px;
@@ -38,8 +49,7 @@
     //     margin-left: 10vw;
     // }
 
-    >.container {
-
+    >.container { 
         width: 65%;
 
         @include media-breakpoint-down(sm) {
@@ -107,6 +117,20 @@
 
         a {
             color: $header_color;
+        }
+    }
+
+
+    &.fixed-nav span a {
+        
+        filter: none;
+
+        color: saturate($text_color, 20%);
+    }
+
+    &.fixed-nav span:hover {
+        a {
+            color: $link_color;
         }
     }
 }

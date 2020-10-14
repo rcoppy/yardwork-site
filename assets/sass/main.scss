@@ -201,6 +201,12 @@ header {
     flex-direction: column;
 }
 
+header p {
+    text-align: center;
+    color: $header_color;
+    filter: drop-shadow(0 2px 4px black);
+}
+
 footer {
     min-height: $footer_height;
 
