@@ -1,15 +1,21 @@
-// import './../assets/sass/main.scss';
-import 'bootstrap';
+// import 'bootstrap';
 import 'waypoints/lib/noframework.waypoints';
+import 'slick-carousel/slick/slick';
 
-const header = document.getElementById('page-header');
+$(document).ready(() => {
+    $('.banner-carousel').slick({
+        autoplay: true,
+        arrows: false,
+        dots: false,
+        draggable: false,
+        swipe: false,
+        pauseOnFocus: false,
+        pauseOnHover: false
+    });
+});
+
 const navbar = document.getElementById('navbar');
 const wrapper = document.querySelector('.wrapper.content');
-
-const scrollingDownWaypoint = new Waypoint({
-    element: navbar,
-    handler: (direction) => setNavPositioning(direction),
-});
 
 const scrollingUpWaypoint = new Waypoint({
     element: wrapper,
@@ -17,23 +23,6 @@ const scrollingUpWaypoint = new Waypoint({
     offset: navbar.offsetHeight,
 });
 
-const cachedCSSAttributes = {
-    headerPosition: 'relative',
-    headerTop: getComputedStyle(header).top,
-    wrapperMarginTop: getComputedStyle(wrapper).marginTop,
-};
-
-const setNavPositioning = (direction) => {
-    
-    if (direction === 'up') {
-        header.style.position = cachedCSSAttributes.headerPosition;
-        header.style.top = cachedCSSAttributes.headerTop;
-        wrapper.style.marginTop = cachedCSSAttributes.wrapperMarginTop;
-        header.classList.remove('is-scrolling');
-    } else {
-        header.style.position = 'fixed';
-        header.style.top = `-${header.offsetHeight - navbar.offsetHeight}px`;
-        wrapper.style.marginTop = `${parseInt(cachedCSSAttributes.wrapperMarginTop) + header.offsetHeight}px`;
-        header.classList.add('is-scrolling');
-    }
+const setNavPositioning = (direction) => {  
+    navbar.classList.toggle('fixed-nav');
 };

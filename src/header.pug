@@ -1,4 +1,14 @@
 header#page-header
-  .container
-    h1 alex rupp-coppi
+  .banner-carousel
+    
+    .banner-slide(style=`background-image: url(${require("../assets/images/eevee.webp")});`)
+    .banner-slide(style=`background-image: url(${require("../assets/images/hero-road-crunch.png")});`)
+    .banner-slide(style=`background-image: url(${require("../assets/images/cartridges.webp")});`)
+    
+    //- .banner-slide(style=`--background: url(${require("../assets/images/eevee.webp")})`)
+    //- .banner-slide(style=`--background: url(${require("../assets/images/hero-road-crunch.png")})`)
+    //- .banner-slide(style=`--background: url(${require("../assets/images/cartridges.webp")})`)
+
+  .centered-header
+    h1 ARC YARD WORK
   include navbar

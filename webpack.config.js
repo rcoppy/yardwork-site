@@ -1,5 +1,6 @@
 const path = require('path');
 const glob = require('glob-all');
+const webpack = require('webpack');
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,6 +10,11 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = (env, options) => {
     return {
+        resolve: {
+            alias: {
+                jquery: 'jquery/src/jquery'
+            }
+        },
         devServer: {
             contentBase: path.join(__dirname, 'dist'),
             compress: true,
@@ -28,7 +34,12 @@ module.exports = (env, options) => {
         optimization: {
             minimizer: [new UglifyJsPlugin()]
         },
-        plugins: [new MiniCssExtractPlugin('[name].css'), 
+        plugins: [
+                new webpack.ProvidePlugin({
+                    '$': 'jquery',
+                    'jQuery': 'jquery',
+                }),
+                 new MiniCssExtractPlugin('[name].css'), 
                 //   new PurgecssPlugin({
                 //     paths: glob.sync([
                 //         `${path.join(__dirname, 'src')}/**/*`,
