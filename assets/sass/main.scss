@@ -48,6 +48,18 @@ body {
     background-attachment: fixed;
 }
 
+#map {
+    margin: 1rem 2rem;
+
+    width: 100%;
+    height: 50vh;
+
+    @include media-breakpoint-up(md) {
+        width: 65%;
+        height: 40vh;
+    }
+}
+
 // header::before {
 //     opacity: 1;
 //     @include transition(opacity 0.4s ease-in-out);
