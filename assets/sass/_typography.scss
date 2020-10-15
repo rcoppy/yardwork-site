@@ -71,7 +71,7 @@ header {
         font-size: 5rem;
         font-weight: normal;
         font-family: 'Alfa Slab One', sans-serif;
-        filter: drop-shadow(0 3px 3px $black-coffee);    
+        filter: drop-shadow(0 0px 4px $black-coffee);    
         color: $header_color;
 
         @include media-breakpoint-down(md) {
@@ -88,5 +88,9 @@ header {
             position: relative; 
             top: -1rem;
         }
+
+        text-align: center;
+        color: $header_color;
+        filter: drop-shadow(0 0px 3px black);
     }
 }
