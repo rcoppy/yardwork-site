@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin'); // <-- can potentially strip out unused bootstrap (preliminary setup wasn't successful--broke certain page styling)
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin'); // for handling the favicon/site manifest
 
 
 module.exports = (env, options) => {
@@ -54,6 +55,15 @@ module.exports = (env, options) => {
                   new HtmlWebpackPlugin({
                     template: './src/index.pug'
                   }),
+                  new CopyPlugin({
+                      patterns: [
+                          {
+                              from: './assets/images/favicon/*',
+                              to: '.',
+                              flatten: true
+                          }
+                      ]
+                  })
                 ],
         module: {
             rules: [{

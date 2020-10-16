@@ -10,7 +10,7 @@
 
 <br>
 
-*Need something else done but don't see it listed here? Just ask!*
+*Need something else done but don't see it listed here? [Just ask!](mailto:alex@arcyardwork.co)*
 
 <span class="section-marker" id="about"></span>
 
@@ -36,4 +36,4 @@ I'm based out of central Madison; I'll go as far west as West Haven, north as Mi
 
 ## Contact
 
-Call **(203) 833-3068** or write alex@arcyardwork.co to get a quote.
+Call [(203) 833-3068](tel:+1-203-833-3068) or write alex@arcyardwork.co to get a quote.
