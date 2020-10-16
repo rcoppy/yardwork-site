@@ -21,9 +21,14 @@ $backdrop-tan: #c0aca0;
 $volt-blue: #243799;
 $volt-aqua: #6cace5;
 
+$leaf-green: #3d5313;
+
 // assignments
 $header_color: $champagne-pink;
 $navbar_color: rgba($eerie-black, 0.8);
+
+$nav_hyperlink_color: $leaf-green;
+$nav_hyperlink_hover_color: lighten($leaf-green, 20%);
 
 $hyperlink_color: $volt-blue;
 $hyperlink_hover_color: $volt-aqua;

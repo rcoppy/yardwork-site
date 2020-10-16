@@ -49,9 +49,9 @@ body {
 }
 
 #map {
-    margin: 1rem 2rem;
+    margin: 1rem auto;
 
-    width: 100%;
+    width: 80%;
     height: 50vh;
 
     @include media-breakpoint-up(md) {
@@ -90,11 +90,15 @@ header .banner-carousel {
     overflow: hidden;
 
     .banner-slide {
-        background-size: cover;
-        background-position: fixed;
-        
-        width: 100vw;
-        height: 100vh;
+        img {
+            height: 100vh;
+            width: unset;
+            
+            @media (min-aspect-ratio: 1/1) {
+                width: 100vw;
+                height: unset;
+            }
+        }
     }
 }
 
@@ -223,9 +227,10 @@ footer {
     padding-top: 4.5rem;
 }
 
-p img {
+p img, .content img {
     border-radius: 5px;
-    margin: 0.5rem 1.5rem;
+    margin: 0.5rem auto;
+    max-width: 80%;
 
     &.float-right,
     &.float-left {

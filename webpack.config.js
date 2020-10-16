@@ -13,7 +13,12 @@ module.exports = (env, options) => {
         resolve: {
             alias: {
                 jquery: 'jquery/src/jquery'
-            }
+            },
+            modules: [
+                'assets',
+                'src',
+                'node_modules'
+            ]
         },
         devServer: {
             contentBase: path.join(__dirname, 'dist'),
@@ -114,10 +119,23 @@ module.exports = (env, options) => {
                         }
                     }],
                 },
+                // {
+                //     test: /\.pug$/,
+                //     loader: 'pug-loader'
+                // },
                 {
                     test: /\.pug$/,
-                    loader: 'pug-loader'
-                },
+                    loaders: [
+                        // html loader gets webpack to process <img> src
+                        'html-loader',
+                        // requires pretty option otherwise some spacing between elements is lost
+                        'pug-html-loader?{"pretty":true,"exports":false}'
+                        ],
+                }
+                // {
+                //     test: /\.(md|markdown)$/,
+                //     use: 'markdown-image-loader'
+                // }
             ],
 
         }
