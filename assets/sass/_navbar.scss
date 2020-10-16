@@ -123,7 +123,7 @@
 
     &.fixed-nav span a {
         
-        filter: none;
+        filter: drop-shadow(0 0 4px rgba(black, 0));
 
         color: $nav_hyperlink_color;
     }
@@ -136,6 +136,6 @@
         // border-left: $border_bottom_width solid $hyperlink_color;
         // border-right: $border_bottom_width solid $hyperlink_color;
 
-        filter: drop-shadow(0 0 4px lighten($nav_hyperlink_color, 15%));
+        filter: drop-shadow(0 0 4px lighten($nav_hyperlink_color, 20%));
     }
 }
