@@ -36,4 +36,4 @@ I'm based out of central Madison; I'll go as far west as West Haven, north as Mi
 
 ## Contact
 
-Call [(203) 833-3068](tel:+1-203-833-3068) or write alex@arcyardwork.co to get a quote.
+Call [(203) 514-2128](tel:+1-203-514-2128) or write alex@arcyardwork.co to get a quote.
